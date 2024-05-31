@@ -13,11 +13,12 @@ This analysis was carried out in four stages with each stage having different ta
 ### Framing the Business Scenario
 I was tasked with anticipating the business task that the client might ask. I must draft questions that will be important and relevant to the CEO and CMO.<br>
 Here are the questions I anticipated:<br>
- CEO:
+CEO:
 - Which region is generating the most and least revenue?<br>
 - What is the trend of sales per month and which month has the highest sales?<br>
 - What are the top-selling products and the least-selling products?<br>
-- What is the country with the highest sales?<br>
+- What is the country with the highest sales?
+
 CMO:
 - Are there Recurring customers?<br>
 - What is the churn rate of our customers?<br>
@@ -30,14 +31,14 @@ With this task, I was tested on different charts and visuals that would be appro
 ### Creating Effective Visuals
 In this task, the client provided us with the dataset and business tasks they needed for analysis. I had to clean and prepare the data before analysing with the appropriate visualizations so that it could be understood by the layperson. Below are the steps I took to get that done.
 
-- **Data Transformation**.<br>
+- Data Transformation.<br>
 Removed Rows in the Quantity column showing negative numbers or below 1.<br>
 Removed Rows in the UnitPrice column that are below $0.<br>
 Removed Rows with blanks.<br>
 Added Revenue Column from multiplying UnitPrice with Quantity.<br>
 All these were done in Power Query(Transform Data) using a filter and add column before loading the data in PowerBI.
 
--** Dataset Summary**.<br>
+- Dataset Summary.<br>
 The dataset has 9 columns namely -:<br>
 InvoiceNo- This column has the invoice number of each purchase made by customers.<br>
 StockCode- This column has the product stock code.<br>
@@ -49,7 +50,7 @@ CustomerID- This column tells us who purchased the product in numerical form.<br
 Country- This column tells us where the customer resides.<br>
 Revenue- This column was created by multiplying UnitPrice by Quantity.
 
--** The Business Tasks**
+- The Business Tasks
 1. The CEO wants to view granular revenue data for each month. The CEO is interested in viewing the seasonal trends and wants to dig deeper into why these trends occur. This analysis will be helpful for the CEO to forecast for the next year.
 
 ![alt text](https://i.postimg.cc/KYVbg0RQ/Tata-Q1.png)
@@ -70,16 +71,17 @@ The third visualization shows the top 10 customers with the highest revenue. The
 ![alt text](https://i.postimg.cc/D015cw5m/Tata-Q4i.png)
 Netherlands is the country that has the highest revenue which makes it the best country for business expansion. Countries like Ireland, Germany and France have a significant customer base that can also be looked at for opportunities.
 
-- **The Dashboard**
+- The Dashboard
 
-![alt text](https://i.postimg.cc/4yGpsbbN/Tata-Dashboard.png)
+[Tata-Dashboard.png](https://postimg.cc/JDTsQX29)
 
 
 ### Communicating Insights and Recommendations.
+
 1. Although the data for December is incomplete, it indicates a promising month as monthly revenue shows a significant upward trend during the -ber months (September to November), likely due to the Christmas holiday season. I recommend the company leverage the increased sales during the holiday season to develop a more effective and consistent marketing strategy throughout the year.
 2. The Netherlands generates the highest revenue and quantity of purchases, while Norway has the lowest. The company should consider intensifying its marketing efforts in the Netherlands and reassessing its business strategy in Norway.
-3. Ireland and the surrounding areas has generated great revenue and the company has a significant customer base that we can tap into for expansion opportunities.
-4.The company should maintain strong relationships with top customers, as they are loyal and contribute significantly to revenue. Offering special incentives can help retain their loyalty. Additionally, further investigation is needed to understand the customers with lower revenue and identify potential strategies to increase their contributions.
+3. Ireland and the surrounding areas have generated great revenue and the company has a significant customer base that we can tap into for expansion opportunities.
+4. The company should maintain strong relationships with top customers, as they are loyal and contribute significantly to revenue. Offering special incentives can help retain their loyalty. Additionally, further investigation is needed to understand the customers with lower revenue and identify potential strategies to increase their contributions.
 
  
 
