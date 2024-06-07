@@ -1,87 +1,72 @@
 # TATA-Data-Visualization
 
-## Introduction
-This is a virtual internship case study with the company, Tata. Established in 1868, it is a multinational conglomerate headquartered in India. It stands as one of India's largest and most diversified enterprises, operating in over 100 countries. Tata's business portfolio spans various sectors, including automotive, consumer products, engineering, energy, materials, services, and technology. The company is renowned for its strong commitment to corporate social responsibility and sustainability, earning it a reputation as one of India's most respected and trusted companies. This program is hosted with the platform Forage and I was able to leverage my data analysis skills and tools in a professional setting with a real-world problem.
+## Client's Background
+Tata is a multinational conglomerate headquartered in India. Established in 1868, It stands as one of India's largest and most diversified enterprises, operating in over 100 countries. Tata's business portfolio spans various sectors, including automotive, consumer products, engineering, energy, materials, services, and technology.
 
-## Stages of the Project
-This analysis was carried out in four stages with each stage having different tasks.<br>
-♦ Framing the Business Scenario.<br>
-♦ Choosing the Right Visuals.<br>
-♦ Creating Effective Visuals.<br>
-♦ Communicating Insights and Analysis.
+## Business Problem
+Tata's online store is encountering difficulties in managing its revenue data, which has hampered decision-making and limited its ability to seize business opportunities. The CEO/CMO has highlighted several key issues:
+- The need to analyze and understand the monthly revenue data for 2011 to identify and investigate seasonal trends, aiding in accurate forecasting for the next year.
+- Idenify the top 10 revenue-generating countries and the corresponding quantities sold.
+- Identify and target the top 10 revenue-generating customers to ensure their continued satisfaction with the products.
+- Gain insights into product demand across all countries, excluding the United Kingdom, to identify regions with the highest demand. This information will inform an expansion strategy aimed at targeting these high-demand areas to generate more business.
 
-### Framing the Business Scenario
-I was tasked with anticipating the business task that the client might ask. I must draft questions that will be important and relevant to the CEO and CMO.<br>
-Here are the questions I anticipated:<br>
-CEO:
-- Which region is generating the most and least revenue?<br>
-- What is the trend of sales per month and which month has the highest sales?<br>
-- What are the top-selling products and the least-selling products?<br>
-- What is the country with the highest sales?
 
-CMO:
-- Are there Recurring customers?<br>
-- What is the churn rate of our customers?<br>
-- Who are the customers who have repeated the most and what do they love about our company to maintain their loyalty?<br>
-- How do the purchases by country affect our marketing efforts and how can we use this information to tailor our campaigns for specific regions?
 
-### Choosing the Right Visuals
-With this task, I was tested on different charts and visuals that would be appropriate for different kinds of scenarios. This exercise was crucial for senior management because incorrect representation could lead to conveying the wrong message or making the wrong decisions by management. Different visualizations serve different purposes, so I needed to understand the utility of each data visualization. There is a quiz that needs to be completed in this task to proceed.
+## The Data Summary
+The dataset for this task was gotten from [Forage](https://www.theforage.com/virtual-experience/MyXvBcppsW2FkNYCX/tata-group/data-visualisation-p5xo/framing-the-business-scenario). It consist of 541,910 rows and 8 columns containing the following information:
+- InvoiceNo- This column has the invoice number of each purchase made by customers.<br>
+- StockCode- This column has the product stock code.<br>
+- Description- This column has the product description and information.<br>
+- Quantity- This column tells us the amount of products purchased.<br>
+- InvoiceDate- This column has dates from when the purchase happened. <br>
+- UnitPrice- This column has the price per unit of the product.<br>
+- CustomerID- This column tells us who purchased the product in numerical form.<br>
+- Country- This column tells us where the customer resides.<br>
 
-### Creating Effective Visuals
-In this task, the client provided us with the dataset and business tasks they needed for analysis. I had to clean and prepare the data before analysing with the appropriate visualizations so that it could be understood by the layperson. Below are the steps I took to get that done.
+## Data Cleaning and Transformaion
+After downloading and thoroughly understanding the dataset, I undertook several steps to clean, transform and prepare the data for analysis. This process is crucial to ensure the accuracy and insightfulness of the data.
+- The dataset was checked for duplicate rows, and none were found.
+- The columns were reviewed to ensure they had the appropriate data types, and where necessary, were converted to text or numbers.
+- Removed Rows in the Quantity column showing negative numbers or below 1.<br>
+- Removed Rows in the UnitPrice column that are below $0.<br>
+- Removed Rows with blanks.<br>
+- Revenue Column was added by multiplying UnitPrice with Quantity.<br>
 
-- Data Transformation.<br>
-Removed Rows in the Quantity column showing negative numbers or below 1.<br>
-Removed Rows in the UnitPrice column that are below $0.<br>
-Removed Rows with blanks.<br>
-Added Revenue Column from multiplying UnitPrice with Quantity.<br>
-All these were done in Power Query(Transform Data) using a filter and add column before loading the data in PowerBI.
+### Tools Used
+Power Query - Data Cleaning and adding new column. <br>
+Power BI - Creating Visualization.
 
-- Dataset Summary.<br>
-The dataset has 9 columns namely -:<br>
-InvoiceNo- This column has the invoice number of each purchase made by customers.<br>
-StockCode- This column has the product stock code.<br>
-Description- This column has the product description and information.<br>
-Quantity- This column tells us the amount of products purchased.<br>
-InvoiceDate- This column has dates from when the purchase happened. <br>
-UnitPrice- This column has the price per unit of the product.<br>
-CustomerID- This column tells us who purchased the product in numerical form.<br>
-Country- This column tells us where the customer resides.<br>
-Revenue- This column was created by multiplying UnitPrice by Quantity.
 
-- The Business Tasks
-1. The CEO wants to view granular revenue data for each month. The CEO is interested in viewing the seasonal trends and wants to dig deeper into why these trends occur. This analysis will be helpful for the CEO to forecast for the next year.
+## Communicating Insights
+1. The CEO wants to view granular revenue data for each month in 2011.
 
 ![alt text](https://i.postimg.cc/KYVbg0RQ/Tata-Q1.png)
-This first visualization is the Monthly revenue data for 2011. From the trend, we can see that August is when the revenue is going in a positive direction through November. November is the month with the most revenue generated by the company. There is incomplete data about December to confirm the seasonality of revenue. Meanwhile, the lowest revenue was recorded in February with a total of $523,631.
+For the year 2011, November generated the highest revenue at $1,509,496, the lowest revenue was recorded in February with a total of $523,631. A notable increase begins in September, with revenue rising by 40% compared to August. This upward trend continues, and peaked in November at $1.5 million. Although, December's data is incomplete and we cannot draw any conclusions for that month, it indicates a promising month. This analysis indicates significant growth in certain months and highlights a seasonal impact on sales, with significant growth occurring in the last four months of the year. 
 
-2. The CMO is interested in viewing the top 10 countries generating the highest revenue. Additionally, the CMO is also interested in viewing the quantity sold along with the revenue generated.
+2. The CMO is interested in viewing the top 10 countries(excluding United Kingdom) generating the highest revenue along with the quantity sold.
 
 ![alt text](https://i.postimg.cc/C54LDjy1/Tata-Q2.png)
-Based on the data above, it can be concluded that the country producing the highest Revenue and Quantity purchased is the Netherlands, with a total of $276,661.86 and 193550 respectively. Meanwhile, the country with the lowest Revenue and Quantity is Norway, with a total of $32378.32 and 15754 respectively.
+Among the top 10 countries, excluding the United Kingdom, the Netherlands ranked highest in both revenue and quantity, with figures amounting to $276,661.86 and 193,550 units, respectively. Conversely, the country with the lowest Revenue and Quantity is Norway, with a total of $32378.32 and 15754 respectively. This insight sheds light on the performance of countries with growth potential. Notably, countries such as the Netherlands, Ireland, Germany, and France demonstrate high volumes of units bought and revenue generated.
 
-3. The CMO of the online retail store wants to view the information on the top 10 customers by revenue. The CMO wants to target the higher revenue-generating customers and ensure that they remain satisfied with their products.
+3. The CMO of the online retail store wants to view the information on the top 10 customers by revenue.
 
 ![alt text](https://i.postimg.cc/CMr2MRnH/Tata-Q3.png)
-The third visualization shows the top 10 customers with the highest revenue. The customer with the highest revenue is the Customer with ID 14646, contributing a total of $271614.14. On the other hand, the customer with the lowest revenue is the Customer with ID 16029, with a total revenue of $67912.32.
+From the analysis, Customer ID 14646 stands out as the highest revenue-generating customer, with a total of $271614.14, while  Customer with ID 16029 generated the least revenue, amounting to $67912.32. Interestingly, there isn't a significant disparity in purchases among these top customers. The highest revenue-generating customer only purchased 17% more than the second highest, indicating that the business does not overly rely on a few customers for revenue generation.
 
-4. The CEO is looking to gain insights into the demand for their products. He wants to look at all countries and see which regions have the greatest demand for their products. Once the CEO gets an idea of the regions that have high demand, he will initiate an expansion strategy which will allow the company to target these areas and generate more business from these regions.
+4. The CEO is looking to gain insights into all countries and the demand for their products.
 
-![alt text](https://i.postimg.cc/D015cw5m/Tata-Q4i.png)
-Netherlands is the country that has the highest revenue which makes it the best country for business expansion. Countries like Ireland, Germany and France have a significant customer base that can also be looked at for opportunities.
+![alt text](https://i.postimg.cc/cLPnwKtK/Tata-map-Question-4.png)
+The map chart illustrates regions with the highest revenue generation compared to those with lower revenues. Apart from the UK, countries such as the Netherlands, Ireland, Germany, France, and Australia are notably contributing to high revenue. The company should consider investing more resources in these areas to stimulate further demand for its products. The map also highlights that the majority of sales occur within the European region. A new strategic approach targeting other regions could potentially enhance sales revenues and overall profitability. Additionally, the country with the highest quantity sold is the Netherlands, totaling  193,550  units.
 
-- The Dashboard
+## The Dashboard
+![alt text](https://i.postimg.cc/WbJQkChv/Tata-Final-Dashboard.png)
 
-[Tata-Dashboard.png](https://postimg.cc/JDTsQX29)
+## Recommendations.
+1. Although the data for December is incomplete, it indicates a promising month as monthly revenue shows a significant upward trend during the -ber months (September to November), likely due to the Christmas holiday season. Considering the substantial revenue surge observed in tthese months, it is advisable to initiate targeted marketing campaigns commencing in late August. This strategic approach will enable the company to leverage the seasonal upswing in sales effectively.I recommend introducing special promotions, discounts, and bundled deals during peak months that can further stimulate sales and maximize revenue.
+2. The Netherlands generates the highest revenue and quantity of purchases. The company should consider intensifying its marketing efforts in the Netherlands as this is where substantial volume and revenue are already generated. 
+3. Growth initiatives should also be targeted at Ireland, Germany, and France and Australia, the company has a significant customer base that we can tap into for expansion opportunities. This can involve localized marketing campaigns, partnerships with local retailers, and customized product offerings.
+4. Maintain strong relationships with top customers, as they are loyal and contribute significantly to revenue. Offering special incentives can help retain their loyalty. Implementing retention strategies such as loyalty programs, regular follow-ups, and personalized offers will also help maintain a steady revenue stream from these customers. Additionally, further investigation is needed to understand the customers with lower revenue and identify potential strategies to increase their contributions.
 
-
-### Communicating Insights and Recommendations.
-
-1. Although the data for December is incomplete, it indicates a promising month as monthly revenue shows a significant upward trend during the -ber months (September to November), likely due to the Christmas holiday season. I recommend the company leverage the increased sales during the holiday season to develop a more effective and consistent marketing strategy throughout the year.
-2. The Netherlands generates the highest revenue and quantity of purchases, while Norway has the lowest. The company should consider intensifying its marketing efforts in the Netherlands and reassessing its business strategy in Norway.
-3. Ireland and the surrounding areas have generated great revenue and the company has a significant customer base that we can tap into for expansion opportunities.
-4. The company should maintain strong relationships with top customers, as they are loyal and contribute significantly to revenue. Offering special incentives can help retain their loyalty. Additionally, further investigation is needed to understand the customers with lower revenue and identify potential strategies to increase their contributions.
 
  
 
